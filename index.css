@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+*{
+    font-family: 'Poppins' , sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 100%;
+}
+section{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #112d42;
+}
+section::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color:#03a9f4 ;
+}
+section .container{
+    position: relative;
+    min-width: 90vw;
+    min-height: 80vh;
+    display: flex;
+    z-index: 1000;
+}
+section .container .contactinfo{
+    position: absolute;
+    top: 3rem;
+    width: 27vw;
+    height: calc(100% - 7rem);
+    background-color: rgb(15, 57, 89);
+    z-index: 1;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    box-shadow: 0 2rem 2rem rgba(0,0,0,0.2);
+}
+section .container .contactinfo h2{
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+section .container .contactinfo .info{
+    position: relative;
+    margin: 2rem 0;
+}
+section .container .contactinfo .info li{
+    position: relative;
+    list-style: none;
+    display: flex;
+    margin: 1rem 0;
+    align-items: flex-start;
+}
+section .container .contactinfo .info li span:nth-child(1){
+    width: 0.5rem;
+    min-width: 0.5rem;
+}
+section .container .contactinfo .info li span:nth-child(1) .fa{
+    font-size: 1rem;
+    color: #fff;
+    opacity: 0.5;
+}
+section .container .contactinfo .info li span:nth-child(2){
+    color: #fff;
+    opacity: 0.5;
+    margin-left: 1rem;
+    font-weight: 300;
+}
+section .container .contactinfo .info li:hover span:nth-child(1) .fa,
+section .container .contactinfo .info li:hover span:nth-child(2){
+    opacity: 1;
+    cursor: pointer;
+}
+section .container .contactinfo .sci{
+    position: relative;
+    display: flex;
+
+}
+section .container .contactinfo .sci li {
+    list-style: none;
+    margin-right: 1rem;
+}
+section .container .contactinfo .sci li a{
+    text-decoration: none;
+}
+section .container .contactinfo .sci li a .fa{
+    color: #fff;
+    opacity: 0.5;
+    font-size: 1rem;
+    transition: 0.5s;
+}
+section .container .contactinfo .sci li:hover a .fa{
+    opacity:1;
+    transform: scale(1.2);
+}
+section .container .cotactform{
+    position: absolute;
+    padding: 5rem 4rem;
+    background-color: #fff;
+    margin-left: 9rem;
+    padding-left: 16rem;
+    height: 100%;
+    width: calc(100% - 9rem);
+    box-shadow: 0 5rem 5rem rgb(0 0 0 / 50%);
+}
+section .container .cotactform h2{
+    color: #0f3959;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+section .container .cotactform .formbx{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+}
+section .container .cotactform .formbx .inputBx{
+    position: relative;
+    margin: 0 0 1.5rem 0;
+}
+section .container .cotactform .formbx .inputBx.w50{
+    width: 47%;
+}
+section .container .cotactform .formbx .inputBx.w100{
+    width: 100%;
+}
+section .container .cotactform .formbx .inputBx textarea,
+section .container .cotactform .formbx .inputBx input{
+    width: 100% !important;
+    resize: none;
+    padding-top: 0.5rem 0 ;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #333;
+    border: none;
+    border-bottom: 0.1rem solid #777;
+    outline: none;
+}
+section .container .cotactform .formbx .inputBx textarea{
+    min-height: 100px;
+}
+section .container .cotactform .formbx .inputBx span{
+    position: absolute;
+    left: 0;
+    padding-top: 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #333;
+    transition: 0.5s;
+    pointer-events: none;
+}
+section .container .cotactform .formbx .inputBx textarea:focus ~ span,
+section .container .cotactform .formbx .inputBx input:focus ~ span,
+section .container .cotactform .formbx .inputBx textarea:valid ~ span,
+section .container .cotactform .formbx .inputBx input:valid ~ span
+{
+    transform: translateY(-1rem);
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    color: #ff568c;
+}
+
+section .container .cotactform .formbx .inputBx input[type="submit"]{
+    position: relative;
+    cursor: pointer;
+    background: #0f3959;
+    border: none;
+    color: #fff;
+    max-width: 10rem;
+    padding: 1rem;
+}
+section .container .cotactform .formbx .inputBx input[type="submit"]:hover{
+    background:#ff568c;
+}
+
+/* responsive */
+@media(max-width : 1101px){
+    html{
+        font-size: 90%;
+    }
+}
+@media(max-width : 975px){
+    html{
+        font-size: 80%;
+    }
+}
+@media(max-width : 833px){
+    html{
+        font-size: 90%;
+    }
+    section .container .cotactform{
+        padding-left: 10rem;
+    }
+    section .container {
+        
+        min-height: 74vh;
+
+    }
+}
+@media(max-width:425px){
+   html{
+       font-size: 60%;
+   }
+   section .container{
+    min-width: 95vw;
+    min-height: 40vh;
+   }
+   section .container .contactinfo{
+    width: 40vw;
+    height: calc(100% - 6rem);
+   }
+   section .container .cotactform{
+    padding: 5rem 4rem;
+    background-color: #fff;
+    margin-left: 5rem;
+    padding-top: 1rem;
+    padding-left: 14rem;
+    height: 100%;
+    width: calc(100% - 5rem);
+    box-shadow: 0 5rem 5rem rgb(0 0 0 / 50%);
+}
+}
